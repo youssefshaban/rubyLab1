@@ -52,15 +52,15 @@ class ComplexCalc
   
   complexnumber1 = ComplexCalc.new(5, 6)
   complexnumber2 = ComplexCalc.new(3, 9)
+  complexnumber3 = ComplexCalc.new(1, 3)
+  complexnumber4 = ComplexCalc.new(1, 6)
   
   puts complexnumber1 + complexnumber2
   puts complexnumber1 * complexnumber2
   
-  #array operation
-  arr = [complexnumber1, complexnumber2, complexnumber1]
+  arr = [complexnumber1, complexnumber2, complexnumber3,complexnumber3]
   
   puts ComplexCalc.bulk_add(arr)
   puts ComplexCalc.bulk_multiply(arr)
   
-  #get state
   ComplexCalc.get_state()
