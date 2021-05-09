@@ -1,0 +1,23 @@
+<h1>Listing articles</h1>
+
+<%= button_to "New Article", new_article_path , :method=> :get, class: 'btn btn-block btn-outline-primary' %>
+<br>
+<table class="table table-hover table-dark">
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article), class: 'btn btn-outline-light' %>
+        <%= link_to 'Edit', edit_article_path(article) , class: 'btn btn-outline-warning' %>
+        <%= link_to 'Destroy', article_path(article), class: 'btn btn-outline-danger',
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+</table>
